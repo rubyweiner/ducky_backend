@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   skip_before_action :authorized, only: [:index, :create]
-  
+
   def index
     @profile = Profile.all
     render json: @profile
@@ -29,6 +29,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :bio, :profile_pic, :cover_photo, :occupation_id, :user_id)
+    params.require(:profile).permit(:first_name, :last_name, :dob, :bio, :profile_pic, :cover_photo, :occupation_id, :user_id)
   end
 end

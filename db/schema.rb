@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2018_09_20_135302) do
 
   create_table "occupations", force: :cascade do |t|
     t.string "title"
-    t.date "dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_09_20_135302) do
   create_table "profiles", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.date "dob"
     t.string "bio"
     t.string "profile_pic"
     t.string "cover_photo"
