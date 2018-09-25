@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  skip_before_action :authorized, only: [:index, :create]
+  skip_before_action :authorized, only: [:index, :create, :update]
 
   def index
     @profile = Profile.all
@@ -29,6 +29,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :dob, :bio, :profile_pic, :cover_photo, :occupation_id, :user_id)
+    params.require(:profile).permit(:first_name, :last_name, :dob, :hometown, :current_location, :github, :blog, :bio, :profile_pic, :cover_photo, :occupation, :education, :user_id)
   end
 end
