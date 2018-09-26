@@ -1,4 +1,4 @@
-userskillclass UserskillsController < ApplicationController
+class UserskillsController < ApplicationController
   skip_before_action :authorized
 
   def index
@@ -31,4 +31,5 @@ userskillclass UserskillsController < ApplicationController
   def userskill_params
     params.require(:userskill).permit(:user_id, :skill_id)
   end
+
 end
