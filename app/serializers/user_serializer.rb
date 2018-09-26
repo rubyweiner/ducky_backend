@@ -5,5 +5,6 @@ class UserSerializer < ActiveModel::Serializer
   # has_many :skills
   # has_many :educations
   has_one :profile
+  has_many :skills, through: :userskills
 
 end

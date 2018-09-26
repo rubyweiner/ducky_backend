@@ -1,5 +1,7 @@
 User.destroy_all
 Profile.destroy_all
+Skill.destroy_all
+Userskill.destroy_all
 
 User.create([
   {email: "ruby@me.com", password: "pw"},
@@ -50,4 +52,32 @@ Profile.create([
     education: "FlatIron School",
     user: User.find_by(email: "ayana@me.com")
   }
+  ])
+
+  Skill.create([
+    {name: "Ruby"},
+    {name: "Rails"},
+    {name: "JavaScript"},
+    {name: "React"},
+    {name: "Redux"}
+  ])
+
+  Userskill.create([
+    {user: User.find_by(email: "ruby@me.com"), skill: Skill.find_by(name: "Ruby")},
+    {user: User.find_by(email: "ruby@me.com"), skill: Skill.find_by(name: "Rails")},
+    {user: User.find_by(email: "ruby@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "ruby@me.com"), skill: Skill.find_by(name: "React")},
+    {user: User.find_by(email: "ruby@me.com"), skill: Skill.find_by(name: "Redux")},
+
+    {user: User.find_by(email: "emily@me.com"), skill: Skill.find_by(name: "Ruby")},
+    {user: User.find_by(email: "emily@me.com"), skill: Skill.find_by(name: "Rails")},
+    {user: User.find_by(email: "emily@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "emily@me.com"), skill: Skill.find_by(name: "React")},
+    {user: User.find_by(email: "emily@me.com"), skill: Skill.find_by(name: "Redux")},
+
+    {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "Ruby")},
+    {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "Rails")},
+    {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "React")},
+    {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "Redux")}
   ])

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :userskills
   resources :profiles
   resources :occupations
   resources :educations
