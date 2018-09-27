@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  skip_before_action :authorized, only: [:index, :create, :update]
+  skip_before_action :authorized, only: [:index, :create, :update, :show]
 
   def index
     @profile = Profile.all
