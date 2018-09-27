@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :friendships
-  has_many :friends, through: :friendships
+  has_many :followships
+  has_many :followers, through: :followships
 
   has_one :profile
   has_many :userskills

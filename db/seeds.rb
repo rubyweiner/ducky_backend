@@ -2,7 +2,7 @@ User.destroy_all
 Profile.destroy_all
 Skill.destroy_all
 Userskill.destroy_all
-Friendship.destroy_all
+Followship.destroy_all
 
 User.create([
   {email: "ruby@me.com", password: "pw"},
@@ -83,7 +83,8 @@ Profile.create([
     {user: User.find_by(email: "ayana@me.com"), skill: Skill.find_by(name: "Redux")}
   ])
 
-  Friendship.create([
-    {user: User.find_by(email: "ruby@me.com"), friend: User.find_by(email: "ayana@me.com")},
-    {user: User.find_by(email: "ayana@me.com"), friend: User.find_by(email: "ruby@me.com")}
+  Followship.create([
+    {user: User.find_by(email: "ruby@me.com"), follower: User.find_by(email: "ayana@me.com")},
+    {user: User.find_by(email: "ayana@me.com"), follower: User.find_by(email: "ruby@me.com")},
+    {user: User.find_by(email: "ayana@me.com"), follower: User.find_by(email: "emily@me.com")}
     ])
