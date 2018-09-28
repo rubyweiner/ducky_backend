@@ -7,4 +7,6 @@ class UserSerializer < ActiveModel::Serializer
   has_one :profile
   has_many :skills, through: :userskills
 
+  has_many :posts
+
 end
