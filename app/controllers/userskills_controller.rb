@@ -2,8 +2,8 @@ class UserskillsController < ApplicationController
   skip_before_action :authorized
 
   def index
-    @userskill = Userskill.all
-    render json: @userskill
+    @userskills = Userskill.all
+    render json: @userskills
   end
 
   def show

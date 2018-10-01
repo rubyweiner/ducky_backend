@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :skills, through: :userskills
   has_many :posts
 
+  has_many :userevents
+  has_many :events, through: :userevents
+
   has_secure_password
   validates :email, uniqueness: { case_sensitive: false }
 end

@@ -2,8 +2,8 @@ class ProfilesController < ApplicationController
   skip_before_action :authorized, only: [:index, :create, :update, :show]
 
   def index
-    @profile = Profile.all
-    render json: @profile
+    @profiles = Profile.all
+    render json: @profiles
   end
 
   def show

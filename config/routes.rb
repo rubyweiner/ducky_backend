@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :userevents
+  resources :events
   resources :posts
   resources :followships
   resources :userskills

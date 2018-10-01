@@ -9,4 +9,6 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :posts
 
+  has_many :events, through: :userevents
+
 end

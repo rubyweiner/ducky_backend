@@ -3,6 +3,8 @@ Profile.destroy_all
 Skill.destroy_all
 Userskill.destroy_all
 Followship.destroy_all
+Event.destroy_all
+Userevent.destroy_all
 
 User.create([
   {email: "ruby@me.com", password: "pw"},
@@ -87,4 +89,26 @@ Profile.create([
     {user: User.find_by(email: "ruby@me.com"), follower: User.find_by(email: "ayana@me.com")},
     {user: User.find_by(email: "ayana@me.com"), follower: User.find_by(email: "ruby@me.com")},
     {user: User.find_by(email: "ayana@me.com"), follower: User.find_by(email: "emily@me.com")}
+    ])
+
+  Event.create([
+    { name: "React Review",
+      location: "Wework White House",
+      description: "Quick review of beginner's React",
+      date: "2018-10-30",
+      time: "12:30:00",
+      cover_photo: "https://cdn-images-1.medium.com/max/1800/1*HSisLuifMO6KbLfPOKtLow.jpeg"
+    },
+    { name: "Ruby on Rails",
+      location: "625 H St, NE",
+      description: "How to use Rails with Ruby",
+      date: "2018-10-21",
+      time: "11:00:00",
+      cover_photo: "http://krailinc.com/wp-content/uploads/2017/08/railroad-tracks.jpg"
+    }
+    ])
+
+    Userevent.create([
+      {user: User.find_by(email: "ruby@me.com"), event: Event.find_by(name: "React Review")},
+      {user: User.find_by(email: "ruby@me.com"), event: Event.find_by(name: "Ruby on Rails")}
     ])
