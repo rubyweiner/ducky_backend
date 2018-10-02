@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_many :skills, through: :userskills
   has_many :posts
 
-  has_many :userevents
-  has_many :events, through: :userevents
+  has_many :userevents, foreign_key: "invitee_id"
+  has_many :events, foreign_key: "host_id"
 
   has_secure_password
   validates :email, uniqueness: { case_sensitive: false }

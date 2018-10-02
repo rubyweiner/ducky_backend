@@ -1,7 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :email
 
-
   has_many :followers, through: :followships
 
   has_one :profile
@@ -9,6 +8,7 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :posts
 
-  has_many :events, through: :userevents
+  has_many :userevents, foreign_key: "invitee_id"
+  has_many :events, foreign_key: "host_id"
 
 end

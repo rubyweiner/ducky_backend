@@ -1,6 +1,6 @@
 class UsereventSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :event_id
+  attributes :id, :invitee_id, :event_id
 
-  belongs_to :user
+  belongs_to :user, foreign_key: :invitee_id
   belongs_to :event
 end

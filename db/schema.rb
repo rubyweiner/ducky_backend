@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_191142) do
     t.date "date"
     t.time "time"
     t.string "cover_photo"
-    t.integer "user_id"
+    t.string "host_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_191142) do
   end
 
   create_table "userevents", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "invitee_id"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

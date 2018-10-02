@@ -29,7 +29,7 @@ class UsereventsController < ApplicationController
   private
 
   def userevent_params
-    params.require(:userevent).permit(:user_id, :event_id)
+    params.require(:userevent).permit(:invitee_id, :event_id)
   end
 
 end

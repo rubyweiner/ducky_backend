@@ -7,7 +7,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.date :date
       t.time :time
       t.string :cover_photo
-    
+      t.string :host_id
+
 
       t.timestamps
     end
