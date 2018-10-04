@@ -10,7 +10,10 @@ User.create([
   {email: "ruby@me.com", password: "pw"},
   {email: "emily@me.com", password: "pw"},
   {email: "ayana@me.com", password: "pw"},
-  {email: "alvaro@me.com", password: "pw"}
+  {email: "alvaro@me.com", password: "pw"},
+  {email: "andres@me.com", password: "pw"},
+  {email: "ryan@me.com", password: "pw"},
+  {email: "josh@me.com", password: "pw"}
   ])
 
 Profile.create([
@@ -64,11 +67,53 @@ Profile.create([
     current_location: "Washington, D.C.",
     github: "https://github.com/alvarodltp",
     bio: "Founder / Lead Developer of NUBOD",
-    profile_pic: "https://amsterdamduckstore.com/wp-content/uploads/2016/11/Fitness-Rubber-Duck-left-slant-Amsterdam-Duck-Store-2.jpg",
+    profile_pic: "https://miro.medium.com/fit/c/240/240/1*Qfjn77DbLVHFl9XhhhmywA.png",
     cover_photo: "https://payload.cargocollective.com/1/2/68904/1152293/distance_beth_hoeckel_470.jpg",
     occupation: "Student",
     education: "FlatIron School",
     user: User.find_by(email: "alvaro@me.com")
+  },
+  {
+    first_name: "Andres",
+    last_name: "Manco",
+    dob: "1992-05-04",
+    hometown: "Caracas, Venezuela",
+    current_location: "Washington, D.C.",
+    github: "https://github.com/andresmanco",
+    bio: "FlatIron Alum - Web Developer",
+    profile_pic: "https://hackmag.com/wp-content/uploads/2015/12/rubber-ducky.jpg",
+    cover_photo: "https://media2.s-nbcnews.com/i/newscms/2018_13/1328286/rubber-ducky-today-tease-180329_56ffccc8d6a5cdc1ce25d5f00fcca7e6.jpg",
+    occupation: "Student",
+    education: "FlatIron School",
+    user: User.find_by(email: "andres@me.com")
+  },
+  {
+    first_name: "Ryan",
+    last_name: "Chan",
+    dob: "1991-02-14",
+    hometown: "Stoughton, Massachusetts",
+    current_location: "Washington, D.C.",
+    github: "https://github.com/ryanchan",
+    bio: "Motorcycle Enthusiast",
+    profile_pic: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/36177165_10156340047595833_1679274969411878912_n.jpg?_nc_cat=104&oh=470255fec9fecfe84ad4ab983c8c42dd&oe=5C1AF533",
+    cover_photo: "http://www.delinleedelovely.com/blog/wp-content/uploads/2013/04/ancients_hoeckel.jpg",
+    occupation: "Student",
+    education: "FlatIron School",
+    user: User.find_by(email: "ryan@me.com")
+  },
+  {
+    first_name: "Josh",
+    last_name: "Miller",
+    dob: "1990-01-05",
+    hometown: "Stoughton, Massachusetts",
+    current_location: "Washington, D.C.",
+    github: "https://github.com/joshmiller",
+    bio: "Web Developer / FlatIron Grad",
+    profile_pic: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/14657377_10103302267137059_6626768481327992110_n.jpg?_nc_cat=108&oh=782f0c2496248a3ba73c782b0325c639&oe=5C5CA7A1",
+    cover_photo: "http://www.nicolevalentinedon.com/wp-content/uploads/2012/03/indiansummer.jpg",
+    occupation: "Student",
+    education: "FlatIron School",
+    user: User.find_by(email: "josh@me.com")
   }
   ])
 
@@ -112,7 +157,30 @@ Profile.create([
 
     {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "Ruby")},
     {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "Javascript")},
-    {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "Python")}
+    {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "Python")},
+    {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "SQL")},
+    {user: User.find_by(email: "alvaro@me.com"), skill: Skill.find_by(name: "C Programming")},
+
+
+    {user: User.find_by(email: "andres@me.com"), skill: Skill.find_by(name: "Ruby")},
+    {user: User.find_by(email: "andres@me.com"), skill: Skill.find_by(name: "R")},
+    {user: User.find_by(email: "andres@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "andres@me.com"), skill: Skill.find_by(name: "Python")},
+    {user: User.find_by(email: "andres@me.com"), skill: Skill.find_by(name: "Redux")},
+
+
+    {user: User.find_by(email: "ryan@me.com"), skill: Skill.find_by(name: "Java")},
+    {user: User.find_by(email: "ryan@me.com"), skill: Skill.find_by(name: "Rails")},
+    {user: User.find_by(email: "ryan@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "ryan@me.com"), skill: Skill.find_by(name: "React")},
+    {user: User.find_by(email: "ryan@me.com"), skill: Skill.find_by(name: "Swift")},
+
+
+    {user: User.find_by(email: "josh@me.com"), skill: Skill.find_by(name: "Swift")},
+    {user: User.find_by(email: "josh@me.com"), skill: Skill.find_by(name: "Rails")},
+    {user: User.find_by(email: "josh@me.com"), skill: Skill.find_by(name: "JavaScript")},
+    {user: User.find_by(email: "josh@me.com"), skill: Skill.find_by(name: "Java")},
+    {user: User.find_by(email: "josh@me.com"), skill: Skill.find_by(name: "R")},
   ])
 
   Followship.create([
@@ -128,7 +196,7 @@ Profile.create([
       date: "2018-10-30",
       time: "12:30:00",
       cover_photo: "https://cdn-images-1.medium.com/max/1800/1*HSisLuifMO6KbLfPOKtLow.jpeg",
-      host: User.find_by(email: "ruby@me.com")
+      host: User.find_by(email: "ayana@me.com")
     },
     { name: "Ruby on Rails",
       location: "625 H St, NE",
@@ -136,6 +204,22 @@ Profile.create([
       date: "2018-10-21",
       time: "11:00:00",
       cover_photo: "http://krailinc.com/wp-content/uploads/2017/08/railroad-tracks.jpg",
+      host: User.find_by(email: "emily@me.com")
+    },
+    { name: "Science Fair",
+      location: "Wework White House",
+      description: "Come see all our hard work on display!",
+      date: "2018-10-04",
+      time: "11:00:00",
+      cover_photo: "https://d1gx29cv2r2f1z.cloudfront.net/wp-content/uploads/sites/11/2018/02/28213622/Science-Fair.jpg",
+      host: User.find_by(email: "ruby@me.com")
+    },
+    { name: "Graduation",
+      location: "Wework White House",
+      description: "${} graduates......",
+      date: "2018-10-05",
+      time: "09:00:00",
+      cover_photo: "http://4.bp.blogspot.com/-OM6o7cPcIZk/T6MGE-NAW7I/AAAAAAAAF4s/MBRqw0Sdvtw/s1600/duck+1.jpg",
       host: User.find_by(email: "ruby@me.com")
     }
     ])
@@ -144,5 +228,17 @@ Profile.create([
       {invitee_id: User.find_by(email: "ayana@me.com").id, event: Event.find_by(name: "React Review")},
       {invitee_id: User.find_by(email: "emily@me.com").id, event: Event.find_by(name: "Ruby on Rails")},
       {invitee_id: User.find_by(email: "alvaro@me.com").id, event: Event.find_by(name: "Ruby on Rails")},
-      {invitee_id: User.find_by(email: "emily@me.com").id, event: Event.find_by(name: "Ruby on Rails")}
+      {invitee_id: User.find_by(email: "emily@me.com").id, event: Event.find_by(name: "Ruby on Rails")},
+      {invitee_id: User.find_by(email: "emily@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "ayana@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "ryan@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "alvaro@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "andres@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "josh@me.com").id, event: Event.find_by(name: "Graduation")},
+      {invitee_id: User.find_by(email: "emily@me.com").id, event: Event.find_by(name: "Science Fair")},
+      {invitee_id: User.find_by(email: "ayana@me.com").id, event: Event.find_by(name: "Science Fair")},
+      {invitee_id: User.find_by(email: "ryan@me.com").id, event: Event.find_by(name: "Science Fair")},
+      {invitee_id: User.find_by(email: "alvaro@me.com").id, event: Event.find_by(name: "Science Fair")},
+      {invitee_id: User.find_by(email: "andres@me.com").id, event: Event.find_by(name: "Science Fair")},
+      {invitee_id: User.find_by(email: "josh@me.com").id, event: Event.find_by(name: "Science Fair")}
     ])

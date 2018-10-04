@@ -1,6 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :email
 
+  has_many :followships
   has_many :followers, through: :followships
 
   has_one :profile

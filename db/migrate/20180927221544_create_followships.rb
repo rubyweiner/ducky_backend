@@ -3,7 +3,7 @@ class CreateFollowships < ActiveRecord::Migration[5.2]
     create_table :followships do |t|
       t.integer :user_id
       t.integer :follower_id
-      
+
       t.timestamps
     end
   end
